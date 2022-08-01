@@ -41,7 +41,7 @@ Based on the above test input and analysing the design, we see the following
   5'b01101: out = inp13; ---> BUG
   
 ```
-For the Multiplexer design, the logic should be `` `` instead of ``a - b`` as in the design code.
+For the Multiplexer design, the logic should be ``1100`` instead of ``1101`` as in the design code.
 
 ## Design Fix
 Updating the design and re-running the test makes the test pass.
