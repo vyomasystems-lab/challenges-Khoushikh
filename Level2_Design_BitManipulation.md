@@ -32,7 +32,7 @@ The following error is seen:
   SRC2_Values = map(''.join, product('0123456789ABCDEF', repeat=8))
   SRC3_Values = map(''.join, product('0123456789ABCDEF', repeat=8))
   Instruction = map(''.join, product('0123456789ABCDEF', repeat=2))
-- Observed Output in the DUT dut.seq_seen.value = 00 
+
 
 Output mismatches for the above inputs proving that there is a design bug
 
