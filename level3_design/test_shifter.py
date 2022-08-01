@@ -34,9 +34,10 @@ async def test_seq_bug1(dut):
 
             dut.S0.value= i[0]
             dut.S1.value= i[1] 
-            print("BeforeShift ",i[0],i[1],dut.Q3.value,dut.Q2.value,dut.Q1.value,dut.Q0.value)
+            print("BeforeShift ",dut.Q3.value,dut.Q2.value,dut.Q1.value,dut.Q0.value)
             await FallingEdge(dut.CLK)
-            print("AfterShift  ",i[0],i[1],dut.Q3.value,dut.Q2.value,dut.Q1.value,dut.Q0.value)
+            print("AfterShift  ",dut.Q3.value,dut.Q2.value,dut.Q1.value,dut.Q0.value)
+            print()
 
             if (i==[0,0]):
                 assert (dut.Q0.value == dut.D3.value  and dut.Q1.value == dut.D0.value and dut.Q2.value == dut.D1.value and dut.Q3.value == dut.D2.value), f"Expected: {dut.D2.value}{dut.D1.value}{dut.D0.value}{dut.D3.value} Got: {dut.Q3.value}{dut.Q2.value}{dut.Q1.value}{dut.Q0.value}" 
