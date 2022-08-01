@@ -4,12 +4,12 @@ TOPLEVEL_LANG ?= verilog
 
 PWD=$(shell pwd)
 
-VERILOG_SOURCES = $(PWD)/               # provide your design path
+VERILOG_SOURCES = $(PWD)/shift_reg.v               # provide your design path
 
-TOPLEVEL := tiny_spi   # design file
-MODULE   := test_spi   # test file
+TOPLEVEL := shift_reg
+MODULE   := test_shifter
 
 include $(shell cocotb-config --makefiles)/Makefile.sim
 
 clean_all: clean
-	rm -rf *.xml sim_build __pycache__ 
+	rm -rf *.xml sim_build __pycache__
